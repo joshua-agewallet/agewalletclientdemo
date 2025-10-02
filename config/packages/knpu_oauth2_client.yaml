@@ -1,0 +1,13 @@
+knpu_oauth2_client:
+    clients:
+        agewallet:
+            type: generic
+            provider_class: League\OAuth2\Client\Provider\GenericProvider
+            client_id: '%env(OAUTH_AGEWALLET_CLIENT_ID)%'
+            client_secret: '%env(OAUTH_AGEWALLET_CLIENT_SECRET)%'
+            redirect_route: connect_agewallet_check
+            redirect_params: {}
+            provider_options:
+                urlAuthorize: 'https://agewallet.ddev.site/authorize'
+                urlAccessToken: 'https://agewallet.ddev.site/token'
+                urlResourceOwnerDetails: 'https://agewallet.ddev.site/userinfo'
