@@ -8,6 +8,6 @@ knpu_oauth2_client:
             redirect_route: connect_agewallet_check
             redirect_params: {}
             provider_options:
-                urlAuthorize: 'https://agewallet.ddev.site/authorize'
-                urlAccessToken: 'https://agewallet.ddev.site/token'
-                urlResourceOwnerDetails: 'https://agewallet.ddev.site/userinfo'
+                urlAuthorize: 'https://agewallet.ddev.site/user/authorize'
+                urlAccessToken: 'https://agewallet.ddev.site/user/token'
+                urlResourceOwnerDetails: 'https://agewallet.ddev.site/user/userinfo'

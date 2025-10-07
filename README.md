@@ -21,8 +21,8 @@ Copy `.env` and set your OIDC endpoints and client details:
 OIDC_ISSUER=https://agewallet.ddev.site
 OIDC_CLIENT_ID=54b3efc8-1524-4ee0-baad-2854289d2da2
 OIDC_REDIRECT_URI=https://127.0.0.1:8000/connect/agewallet/check
-OIDC_AUTH_URL=https://agewallet.ddev.site/authorize
-OIDC_TOKEN_URL=https://agewallet.ddev.site/token
+OIDC_AUTH_URL=https://agewallet.ddev.site/user/authorize
+OIDC_TOKEN_URL=https://agewallet.ddev.site/user/token
 OIDC_JWKS_URI=https://agewallet.ddev.site/.well-known/jwks.json
 ```
 
@@ -40,7 +40,7 @@ This starts the login flow.
 
 ### Step 1. **Authorization Request**
 - **What happens:**  
-  The demo client redirects to AgeWallet’s `/authorize` with:
+  The demo client redirects to AgeWallet’s `/user/authorize` with:
   - `response_type=code`
   - `scope=openid age`
   - `client_id` and `redirect_uri`
@@ -74,7 +74,7 @@ This starts the login flow.
 
 ### Step 3. **Token Exchange**
 - **What happens:**  
-  The demo posts to `/token` with:
+  The demo posts to `/user/token` with:
   - `grant_type=authorization_code`
   - `code`
   - `redirect_uri`
